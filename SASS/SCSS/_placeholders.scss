@@ -1,0 +1,36 @@
+/***** Position *****/
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***** Font *****/
+%font-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+%font-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+%font-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/***** Button Linear-Gradient *****/
+%btn-linear {
+  @extend %flex-center;
+  @extend %font-medium;
+  text-decoration: none;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: $background-linear-gradient;
+  color: var(--White, #fff);
+  cursor: pointer;
+}
