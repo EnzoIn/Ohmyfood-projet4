@@ -1,15 +1,15 @@
-/***** @import *****/
-
-@import "./variables";
-@import "./mixins";
-@import "./placeholders";
-
 /***** Reset CSS ******/
 *,::before, ::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+
+/***** @import *****/
+@import "./variables";
+@import "./mixins";
+@import "./placeholders";
+
 
 /***** General ******/
 h1, h2 {
@@ -55,11 +55,10 @@ form {
     background: $background-grey-light;
     padding-bottom: 60px;
     h1 {
-        width: 275px;
         margin: 35px 0 10px;
+        padding: 0 60px;
     }
     p {
-        width: 315px;
         @extend %font-light;
         font-size: 18px;
         margin: 0 0 25px;
@@ -69,4 +68,151 @@ form {
     @extend %btn-linear;
 }
 
+/***** Section Function *****/
+.function {
+    padding: 20px 20px 60px;
+    ul {
+        @extend %flex-center;
+        flex-direction: column;
+        gap: 20px;
+        li {
+            @extend %font-medium;
+            @extend %flex-center;
+            position: relative;
+            width: calc(100% - 15px);
+            height: 72px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            background: $background-grey-light;
+        }
+    }
+}
 
+.function h2 {
+    margin: 30px 0 25px;
+}
+
+.function span {
+    @extend %flex-center;
+    @extend %font-medium;
+    @include position(absolute, $left:-12px);
+    font-size: 13px;
+    width: 24px;
+    height: 24px;
+    background: $background-ellipse;
+    color: white;
+    border-radius: 50%;
+}
+
+.function li i {
+    @include position(absolute, $left:35px)
+}
+
+.fa-solid.fa-mobile-screen-button,
+.fa-solid.fa-list-ul {
+    color: $asset-color-grey;
+}
+
+.fa-solid.fa-store {
+    color: $background-ellipse;
+}
+
+/***** Section Restaurants *****/
+.restaurants {
+    background: $background-grey-light;
+    padding: 0 20px 60px;
+    width: 100%;
+    h2 {
+        padding: 50px 0 20px;
+    }
+}
+
+.restaurants-cards {
+    @extend %flex-center;
+    flex-wrap: wrap;
+    gap: 18px;
+    a {
+        text-decoration: none;
+    }
+    .card {
+        width: 340px;
+        height: 251px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+        background: white;
+        img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+        }
+    }
+
+}
+
+.restaurants-cards .card-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    .card-title {
+        @extend %font-bold;
+        color: black;
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+    .card-subtitle {
+        @extend %font-light;
+        color: black;
+        font-size: 17px;
+    }
+}
+
+.fa-regular.fa-heart {
+    @include position(absolute, $right:30px, $bottom:20px);
+    font-size: 22px;
+    color: black;
+}
+.fa-solid.fa-heart {
+    @include position(absolute, $right:30px);
+    font-size: 22px;
+    display: none;
+}
+
+.container-footer {
+   display: flex;
+   flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    padding: 22px 25px;
+    background: $text-grey-dark;
+    img {
+        width: 139px;
+        height: 27px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        list-style: none;
+    }
+    a {
+        display: flex;
+        font-family: "Roboto", sans-serif;
+        gap: 10px;
+        text-decoration: none;
+        color: white;
+    }
+    .info {
+        font-weight: 300;
+    }
+    .info-icon-1{
+        font-weight: 500;
+        i {
+            padding-right: 6px;
+        }
+    }
+    .info-icon-2 {
+        font-weight: 500;
+    }
+}

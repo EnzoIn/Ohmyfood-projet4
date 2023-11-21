@@ -1,25 +1,33 @@
+/***** Reset CSS ******/
+*, ::before, ::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 /***** @import *****/
 /***** Text Colors *****/
+/****** Asset colors *****/
 /***** Background Colors *****/
 /***** Position *****/
-.description, form, .logo-header, .btn-linear {
+.restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .btn-linear {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /***** Font *****/
-h1, h2 {
+.restaurants-cards .card-content .card-title, h1, h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
-form input::placeholder, .btn-linear {
+.function span, .function ul li, form input::placeholder, .btn-linear {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-.description p {
+.restaurants-cards .card-content .card-subtitle, .description p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
@@ -34,13 +42,6 @@ form input::placeholder, .btn-linear {
   background: linear-gradient(355deg, #9356dc -11.44%, #ff79da 123.93%);
   color: var(--White, #fff);
   cursor: pointer;
-}
-
-/***** Reset CSS ******/
-*, ::before, ::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 /***** General ******/
@@ -84,11 +85,156 @@ form input:focus {
   padding-bottom: 60px;
 }
 .description h1 {
-  width: 275px;
   margin: 35px 0 10px;
+  padding: 0 60px;
 }
 .description p {
-  width: 315px;
   font-size: 18px;
   margin: 0 0 25px;
+}
+
+/***** Section Function *****/
+.function {
+  padding: 20px 20px 60px;
+}
+.function ul {
+  flex-direction: column;
+  gap: 20px;
+}
+.function ul li {
+  position: relative;
+  width: calc(100% - 15px);
+  height: 72px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  background: #F6F6F6;
+}
+
+.function h2 {
+  margin: 30px 0 25px;
+}
+
+.function span {
+  position: absolute;
+  left: -12px;
+  font-size: 13px;
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  color: white;
+  border-radius: 50%;
+}
+
+.function li i {
+  position: absolute;
+  left: 35px;
+}
+
+.fa-solid.fa-mobile-screen-button,
+.fa-solid.fa-list-ul {
+  color: #7E7E7E;
+}
+
+.fa-solid.fa-store {
+  color: #9356DC;
+}
+
+/***** Section Restaurants *****/
+.restaurants {
+  background: #F6F6F6;
+  padding: 0 20px 60px;
+  width: 100%;
+}
+.restaurants h2 {
+  padding: 50px 0 20px;
+}
+
+.restaurants-cards {
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.restaurants-cards a {
+  text-decoration: none;
+}
+.restaurants-cards .card {
+  width: 340px;
+  height: 251px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+.restaurants-cards .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurants-cards .card-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+.restaurants-cards .card-content .card-title {
+  color: black;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.restaurants-cards .card-content .card-subtitle {
+  color: black;
+  font-size: 17px;
+}
+
+.fa-regular.fa-heart {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 22px;
+  color: black;
+}
+
+.fa-solid.fa-heart {
+  position: absolute;
+  right: 30px;
+  font-size: 22px;
+  display: none;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  padding: 22px 25px;
+  background: #353535;
+}
+.container-footer img {
+  width: 139px;
+  height: 27px;
+}
+.container-footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  list-style: none;
+}
+.container-footer a {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+}
+.container-footer .info {
+  font-weight: 300;
+}
+.container-footer .info-icon-1 {
+  font-weight: 500;
+}
+.container-footer .info-icon-1 i {
+  padding-right: 6px;
+}
+.container-footer .info-icon-2 {
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
