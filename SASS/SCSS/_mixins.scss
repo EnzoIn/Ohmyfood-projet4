@@ -1,7 +1,31 @@
-@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+/****** Mixins Position *****/
+@mixin position(
+  $position,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
   position: $position;
   top: $top;
   right: $right;
   bottom: $bottom;
   left: $left;
+}
+
+/****** Mixins animations ******/
+@mixin btn-linear-effect() {
+  &:hover {
+    opacity: 80%;
+    transition: 0.5s;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+  &:not(:hover) {
+    opacity: none;
+    transition: 0.5s;
+  }
+}
+
+@mixin heart-effect() {
+  
 }
