@@ -108,7 +108,8 @@ form {
 }
 
 .function li i {
-  @include position(absolute, $left: 35px);
+  @include position(absolute, $left: 35px, $top:23px);
+  font-size: 20px;
 }
 
 .fa-solid.fa-mobile-screen-button,
@@ -187,7 +188,7 @@ form {
   color: black;
 }
 .fa-solid.fa-heart {
-  @include position(absolute, $right: 30px);
+  @include position(absolute, $right: 30px, $bottom: 20px);
   font-size: 22px;
   display: none;
   color: $background-linear-gradient;

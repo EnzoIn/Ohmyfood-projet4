@@ -14,38 +14,25 @@
 /****** Mixins Position *****/
 /****** Mixins animations ******/
 /***** Position *****/
-.restaurants-cards,
-.function span,
-.function ul li,
-.function ul,
-.description,
-form,
-.logo-header,
-.btn-linear {
+.restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .btn-linear {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /***** Font *****/
-.restaurants-cards .card-content .card-title,
-h1,
+.restaurants-cards .card-content .card-title, h1,
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
 }
 
-.restaurants-cards .card .new,
-.function span,
-.function ul li,
-form input::placeholder,
-.btn-linear {
+.restaurants-cards .card .new, .function span, .function ul li, form input::placeholder, .btn-linear {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
 
-.restaurants-cards .card-content .card-subtitle,
-.description p {
+.restaurants-cards .card-content .card-subtitle, .description p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
@@ -78,7 +65,7 @@ h2 {
 
 /****** Header Location *****/
 form {
-  background: #eaeaea;
+  background: #EAEAEA;
   width: 100%;
   height: 50px;
 }
@@ -100,7 +87,7 @@ form input:focus {
 .description {
   flex-direction: column;
   text-align: center;
-  background: #f6f6f6;
+  background: #F6F6F6;
   padding-bottom: 60px;
 }
 .description h1 {
@@ -136,7 +123,7 @@ form input:focus {
   height: 72px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  background: #f6f6f6;
+  background: #F6F6F6;
 }
 
 .function h2 {
@@ -149,28 +136,30 @@ form input:focus {
   font-size: 13px;
   width: 24px;
   height: 24px;
-  background: #9356dc;
+  background: #9356DC;
   color: white;
   border-radius: 50%;
 }
 
 .function li i {
   position: absolute;
+  top: 23px;
   left: 35px;
+  font-size: 20px;
 }
 
 .fa-solid.fa-mobile-screen-button,
 .fa-solid.fa-list-ul {
-  color: #7e7e7e;
+  color: #7E7E7E;
 }
 
 .fa-solid.fa-store {
-  color: #9356dc;
+  color: #9356DC;
 }
 
 /***** Section Restaurants *****/
 .restaurants {
-  background: #f6f6f6;
+  background: #F6F6F6;
   padding: 0 20px 60px;
   width: 100%;
 }
@@ -204,7 +193,7 @@ form input:focus {
   top: 12px;
   right: 12px;
   color: #008766;
-  background: #99e2d0;
+  background: #99E2D0;
   font-size: 14px;
   padding: 6px 9px;
   border-radius: 2px;
@@ -238,6 +227,7 @@ form input:focus {
 .fa-solid.fa-heart {
   position: absolute;
   right: 30px;
+  bottom: 20px;
   font-size: 22px;
   display: none;
   color: linear-gradient(355deg, #9356dc -11.44%, #ff79da 123.93%);
@@ -279,4 +269,4 @@ form input:focus {
 }
 .container-footer .info-icon-2 {
   font-weight: 500;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

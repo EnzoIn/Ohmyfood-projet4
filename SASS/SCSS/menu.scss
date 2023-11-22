@@ -1,5 +1,89 @@
 /***** @import *****/
-
 @import "./variables";
 @import "./mixins";
 @import "./placeholders";
+
+/***** Header *****/
+.logo-header {
+    position: relative;
+    .back-arrow {
+        @include position(absolute, $left:20px);
+        color: $text-grey-dark;
+        font-size: 20px;
+    }
+}
+
+/***** Main Container *****/
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+    }
+}
+
+/***** Section Menu *****/
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1055px;
+    background: $background-grey-light;
+    .restaurant-title {
+        @extend %font-title-menu;
+    }
+}
+
+.menu-header {
+    @extend %flex-center;
+}
+
+.menu-main {
+    @extend %flex-center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 635px;
+    h3 {
+        @extend %font-light;
+    }
+}
+
+.case {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+    .txt{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .title {
+            @extend %font-medium;
+            font-size: 18px;
+        }
+        .subtitle {
+            @extend %font-light;
+            font-size: 15px;
+        }
+    }
+    .price {
+        @extend %font-bold;
+        font-size: 15px;
+    }
+}

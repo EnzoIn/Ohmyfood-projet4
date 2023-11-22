@@ -21,6 +21,13 @@
   font-weight: 300;
 }
 
+%font-title-menu {
+  font-family: 'Shrikhand', serif;
+  font-weight: 400;
+  font-size: 28px;
+  font-style: italic;
+}
+
 /***** Button Linear-Gradient *****/
 %btn-linear {
   @extend %flex-center;
