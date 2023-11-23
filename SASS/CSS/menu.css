@@ -1,11 +1,13 @@
+@charset "UTF-8";
 /***** @import *****/
 /***** Text Colors *****/
 /****** Asset colors *****/
 /***** Background Colors *****/
 /****** Mixins Position *****/
 /****** Mixins animations ******/
+/****** Border <h3> entrées/plats/desserts ******/
 /***** Position *****/
-.menu-main, .menu-header {
+.menu-footer, .check-box, .menu-main, .menu-header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,11 +66,33 @@
 .menu {
   display: flex;
   flex-direction: column;
+  padding: 0 15px 0 15px;
+  border-radius: 20px 20px 0 0;
+  margin-top: -45px;
   gap: 40px;
   width: 100%;
   max-width: 1055px;
   background: #F6F6F6;
 }
+.menu .restaurant-title {
+  padding-right: 20px;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px 20px 0 0;
+}
+.menu-header .fa-regular.fa-heart {
+  font-size: 22px;
+  color: black;
+}
+.menu-header .fa-solid.fa-heart {
+  font-size: 22px;
+  display: none;
+  color: linear-gradient(355deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+
 .menu-main {
   flex-direction: column;
   gap: 40px;
@@ -78,14 +102,27 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
   max-width: 635px;
 }
+.menu-box h3 {
+  position: relative;
+  padding-bottom: 10px;
+}
+.menu-box h3::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 46px;
+  border-bottom: 3px solid #99E2D0;
+}
+
 .case {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  padding: 15px;
+  height: 69px;
   background: white;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -93,14 +130,35 @@
 .case .txt {
   display: flex;
   flex-direction: column;
+  padding: 15px 0 15px 15px;
+  width: 100%;
   gap: 5px;
 }
 .case .txt .title {
   font-size: 18px;
 }
 .case .txt .subtitle {
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 15px;
 }
 .case .price {
   font-size: 15px;
+  padding: 15px 15px 15px 0;
+}
+
+.check-box {
+  display: none;
+  width: 69px;
+  height: 69px;
+  border-radius: 0 15px 15px 0;
+  background: #99E2D0;
+}
+.check-box .fa-solid.fa-circle-check {
+  color: white;
+  font-size: 22px;
+}
+
+.menu-footer {
+  padding-bottom: 40px;
 }/*# sourceMappingURL=menu.css.map */

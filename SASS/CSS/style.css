@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***** Reset CSS ******/
 *,
 ::before,
@@ -13,6 +14,7 @@
 /***** Background Colors *****/
 /****** Mixins Position *****/
 /****** Mixins animations ******/
+/****** Border <h3> entrées/plats/desserts ******/
 /***** Position *****/
 .restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .btn-linear {
   display: flex;
@@ -215,16 +217,14 @@ form input:focus {
   color: black;
   font-size: 17px;
 }
-
-.fa-regular.fa-heart {
+.restaurants-cards .card-content .fa-regular.fa-heart {
   position: absolute;
   right: 30px;
   bottom: 20px;
   font-size: 22px;
   color: black;
 }
-
-.fa-solid.fa-heart {
+.restaurants-cards .card-content .fa-solid.fa-heart {
   position: absolute;
   right: 30px;
   bottom: 20px;

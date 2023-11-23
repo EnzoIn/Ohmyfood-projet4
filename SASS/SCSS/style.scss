@@ -180,18 +180,17 @@ form {
     color: black;
     font-size: 17px;
   }
-}
-
-.fa-regular.fa-heart {
-  @include position(absolute, $right: 30px, $bottom: 20px);
-  font-size: 22px;
-  color: black;
-}
-.fa-solid.fa-heart {
-  @include position(absolute, $right: 30px, $bottom: 20px);
-  font-size: 22px;
-  display: none;
-  color: $background-linear-gradient;
+  .fa-regular.fa-heart {
+    @include position(absolute, $right: 30px, $bottom: 20px);
+    font-size: 22px;
+    color: black;
+  }
+  .fa-solid.fa-heart {
+    @include position(absolute, $right: 30px, $bottom: 20px);
+    font-size: 22px;
+    display: none;
+    color: $background-linear-gradient;
+  }
 }
 
 .container-footer {

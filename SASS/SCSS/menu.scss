@@ -31,17 +31,33 @@
 .menu {
     display: flex;
     flex-direction: column;
+    padding: 0 15px 0 15px;
+    border-radius: 20px 20px 0 0;
+    margin-top: -45px;
     gap: 40px;
     width: 100%;
     max-width: 1055px;
     background: $background-grey-light;
     .restaurant-title {
         @extend %font-title-menu;
+        padding-right: 20px;
     }
 }
 
 .menu-header {
+    display: flex;
+    justify-content: flex-start;
     @extend %flex-center;
+    padding: 30px 20px 0 0;
+    .fa-regular.fa-heart {
+        font-size: 22px;
+        color: black;
+      }
+      .fa-solid.fa-heart {
+        font-size: 22px;
+        display: none;
+        color: $background-linear-gradient;
+      }
 }
 
 .menu-main {
@@ -54,9 +70,11 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
     max-width: 635px;
     h3 {
         @extend %font-light;
+        @include menu-line();
     }
 }
 
@@ -65,25 +83,49 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
-    padding: 15px;
+    height: 69px;
     background: white;
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     .txt{
         display: flex;
         flex-direction: column;
+        padding: 15px 0 15px 15px;
+        width: 100%;
         gap: 5px;
         .title {
             @extend %font-medium;
             font-size: 18px;
+            
         }
         .subtitle {
             @extend %font-light;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             font-size: 15px;
         }
     }
     .price {
         @extend %font-bold;
         font-size: 15px;
+        padding: 15px 15px 15px 0;
     }
+}
+
+.check-box {
+    display: none;
+    @extend %flex-center;
+    width: 69px;
+    height: 69px;
+    border-radius: 0 15px 15px 0;
+    background: $background-green-light;
+    .fa-solid.fa-circle-check {
+        color: white;
+        font-size: 22px;
+    }
+}
+
+.menu-footer {
+    @extend %flex-center;
+    padding-bottom: 40px;
 }

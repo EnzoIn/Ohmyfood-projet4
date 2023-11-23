@@ -26,6 +26,15 @@
   }
 }
 
-@mixin heart-effect() {
-  
+/****** Border <h3> entrées/plats/desserts ******/
+@mixin menu-line() {
+  position: relative;
+  padding-bottom: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 46px;
+    border-bottom: 3px solid $background-green-light;
+  }
 }
