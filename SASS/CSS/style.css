@@ -14,9 +14,9 @@
 /***** Background Colors *****/
 /****** Mixins Position *****/
 /****** Mixins animations ******/
-/****** Border <h3> entrées/plats/desserts ******/
+/****** Border entrées/plats/desserts ******/
 /***** Position *****/
-.restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .btn-linear {
+.restaurants-cards a, .restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .btn-linear {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,6 +175,7 @@ form input:focus {
 }
 .restaurants-cards a {
   text-decoration: none;
+  width: 100%;
 }
 .restaurants-cards .card {
   position: relative;

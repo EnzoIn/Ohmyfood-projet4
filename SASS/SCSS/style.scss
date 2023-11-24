@@ -136,7 +136,9 @@ form {
   flex-wrap: wrap;
   gap: 18px;
   a {
+    @extend %flex-center;
     text-decoration: none;
+    width: 100%;
   }
   .card {
     position: relative;
