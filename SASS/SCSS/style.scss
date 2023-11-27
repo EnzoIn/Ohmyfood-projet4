@@ -51,6 +51,8 @@ form {
     }
     &:focus {
       text-align: center;
+      @extend %font-medium;
+      color: $text-grey-dark;
     }
   }
 }

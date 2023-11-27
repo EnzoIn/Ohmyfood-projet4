@@ -13,8 +13,19 @@
 /****** Asset colors *****/
 /***** Background Colors *****/
 /****** Mixins Position *****/
-/****** Mixins ******/
 /****** Border entrées/plats/desserts ******/
+/***** Animation Button Linear Gradient *****/
+/***** Animation Slider-Left *****/
+@keyframes slider-left {
+  from {
+    transform: translateX(100px);
+    width: 0;
+  }
+  to {
+    transform: translateX(0);
+    width: 69px;
+  }
+}
 /***** Animation menu  *****/
 @keyframes menu-fade {
   from {
@@ -55,7 +66,7 @@ h2 {
   font-weight: 700;
 }
 
-.restaurants-cards .card .new, .function span, .function ul li, form input::placeholder, .btn-linear {
+.restaurants-cards .card .new, .function span, .function ul li, form input:focus, form input::placeholder, .btn-linear {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
@@ -130,6 +141,7 @@ form input::placeholder {
 }
 form input:focus {
   text-align: center;
+  color: #353535;
 }
 
 /***** Header Description *****/

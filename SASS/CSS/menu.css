@@ -4,8 +4,19 @@
 /****** Asset colors *****/
 /***** Background Colors *****/
 /****** Mixins Position *****/
-/****** Mixins ******/
 /****** Border entrées/plats/desserts ******/
+/***** Animation Button Linear Gradient *****/
+/***** Animation Slider-Left *****/
+@keyframes slider-left {
+  from {
+    transform: translateX(100px);
+    width: 0;
+  }
+  to {
+    transform: translateX(0);
+    width: 69px;
+  }
+}
 /***** Animation menu  *****/
 @keyframes menu-fade {
   from {
@@ -159,6 +170,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  overflow: hidden;
   opacity: 0;
   width: 100%;
   height: 69px;
@@ -189,7 +201,7 @@
 }
 .case .price {
   font-size: 15px;
-  padding: 15px 15px 15px 0;
+  padding: 15px 15px 15px 5px;
 }
 
 .check-box {
@@ -199,9 +211,8 @@
   border-radius: 0 15px 15px 0;
   background: #99E2D0;
 }
-.check-box:active {
-  width: 69px;
-  overflow: visible;
+.case:hover .check-box {
+  animation: slider-left 0.5s ease-in-out forwards;
 }
 .check-box .fa-solid.fa-circle-check {
   color: white;
@@ -212,7 +223,7 @@
   padding: 28px 0 40px;
 }
 
-/***** Animations *****/
+/***** Animations Delay Menu *****/
 #article-1 {
   animation: menu-fade 1s ease-in-out forwards;
   animation-delay: 0ms;

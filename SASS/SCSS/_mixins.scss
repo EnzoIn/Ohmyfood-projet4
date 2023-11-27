@@ -13,7 +13,19 @@
   left: $left;
 }
 
-/****** Mixins ******/
+/****** Border entrées/plats/desserts ******/
+@mixin menu-line() {
+  position: relative;
+  padding-bottom: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 46px;
+    border-bottom: 3px solid $background-green-light;
+  }
+}
+/***** Animation Button Linear Gradient *****/
 @mixin btn-linear-effect() {
   &:hover {
     opacity: 80%;
@@ -26,6 +38,31 @@
   }
 }
 
+/***** Animation Slider-Left *****/
+@keyframes slider-left {
+  from {
+    transform: translateX(100px);
+    width: 0;
+  }
+  to {
+    transform: translateX(0);
+    width: 69px;
+  }
+}
+
+/***** Animation menu  *****/
+@keyframes menu-fade {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/***** Animation Loader *****/
 @mixin loader() {
   @extend %flex-center;
   position: fixed;
@@ -49,32 +86,6 @@
   }
 }
 
-/****** Border entrées/plats/desserts ******/
-@mixin menu-line() {
-  position: relative;
-  padding-bottom: 10px;
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 46px;
-    border-bottom: 3px solid $background-green-light;
-  }
-}
-
-/***** Animation menu  *****/
-@keyframes menu-fade {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/***** Animation Loader *****/
 @keyframes cancel-loader {
   100% {
     display: none;
