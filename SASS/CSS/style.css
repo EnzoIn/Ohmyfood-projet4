@@ -13,10 +13,36 @@
 /****** Asset colors *****/
 /***** Background Colors *****/
 /****** Mixins Position *****/
-/****** Mixins animations ******/
+/****** Mixins ******/
 /****** Border entrées/plats/desserts ******/
+/***** Animation menu  *****/
+@keyframes menu-fade {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/***** Animation Loader *****/
+@keyframes cancel-loader {
+  100% {
+    display: none;
+  }
+}
+@keyframes flip-loader {
+  0% {
+    transform: perspective(60px) rotate(45deg) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(60px) rotate(45deg) rotateX(-360deg) rotateY(0deg);
+  }
+}
+/***** Animation Heart *****/
 /***** Position *****/
-.restaurants-cards a, .restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .btn-linear {
+.restaurants-cards a, .restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .loader-container .loader, .loader-container, .btn-linear {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +81,27 @@ h2 {
 h1,
 h2 {
   font-size: 24px;
+}
+
+/***** Loader *****/
+.loader-container {
+  position: fixed;
+  background: white;
+  opacity: 80%;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  animation: cancel-loader 2s forwards;
+}
+.loader-container .loader {
+  font-size: 80px;
+  animation: flip-loader 2s linear infinite;
+}
+.loader-container .loader i {
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-mask-image: linear-gradient(193deg, #000 90%, transparent);
 }
 
 /****** Header Logo *****/
@@ -121,7 +168,7 @@ form input:focus {
 }
 .function ul li {
   position: relative;
-  width: calc(100% - 15px);
+  width: 100%;
   height: 72px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -229,9 +276,16 @@ form input:focus {
   position: absolute;
   right: 30px;
   bottom: 20px;
+  opacity: 0;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-mask-image: linear-gradient(193deg, #000 90%, transparent);
   font-size: 22px;
-  display: none;
-  color: linear-gradient(355deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+.restaurants-cards .card-content .fa-solid.fa-heart:hover {
+  opacity: 100%;
+  transition: 0.8s;
 }
 
 .container-footer {
