@@ -53,7 +53,7 @@
 }
 /***** Animation Heart *****/
 /***** Position *****/
-.restaurants-cards a, .restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .loader-container .loader, .loader-container, .btn-linear {
+.restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .loader-container .loader, .loader-container, .btn-linear {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,6 +134,7 @@ form label {
 }
 form input {
   all: unset;
+  width: 150px;
 }
 form input::placeholder {
   color: #353535;
@@ -233,12 +234,14 @@ form input:focus {
   gap: 18px;
 }
 .restaurants-cards a {
+  display: flex;
+  justify-content: flex-start;
   text-decoration: none;
   width: 100%;
 }
 .restaurants-cards .card {
   position: relative;
-  width: 340px;
+  width: 100%;
   height: 251px;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -336,4 +339,63 @@ form input:focus {
 }
 .container-footer .info-icon-2 {
   font-weight: 500;
+}
+
+/***** Tablette et Desktop *****/
+@media only screen and (min-width: 767.98px) {
+  .restaurants-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 50px;
+  }
+  .restaurants h2 {
+    padding: 50px 50px 20px;
+  }
+  .function {
+    padding: 20px 70px 60px;
+  }
+  .container-footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 115px;
+    gap: 90px;
+    padding: 30px 25px;
+  }
+  .container-footer ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .container-footer .info-icon-2 {
+    padding-right: 30px;
+  }
+}
+/***** Desktop *****/
+@media only screen and (min-width: 1024px) {
+  .description {
+    padding-bottom: 30px;
+  }
+  .description h1 {
+    font-size: 40px;
+  }
+  .description p {
+    margin: 25px 0 25px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .restaurants-cards {
+    padding: 0 160px;
+    row-gap: 50px;
+    column-gap: 100px;
+  }
+  .function {
+    padding: 20px 180px 60px;
+  }
+  .function ul {
+    flex-direction: row;
+    gap: 35px;
+  }
+  .restaurants h2 {
+    padding: 50px 160px 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -44,6 +44,7 @@ form {
   }
   input {
     all: unset;
+    width: 150px;
     &::placeholder {
       @extend %font-medium;
       color: $text-grey-dark;
@@ -115,7 +116,7 @@ form {
 }
 
 .function li i {
-  @include position(absolute, $left: 35px, $top:23px);
+  @include position(absolute, $left: 35px, $top: 23px);
   font-size: 20px;
 }
 
@@ -143,13 +144,14 @@ form {
   flex-wrap: wrap;
   gap: 18px;
   a {
-    @extend %flex-center;
+    display: flex;
+    justify-content: flex-start;
     text-decoration: none;
     width: 100%;
   }
   .card {
     position: relative;
-    width: 340px;
+    width: 100%;
     height: 251px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
@@ -238,3 +240,69 @@ form {
     font-weight: 500;
   }
 }
+
+/***** Tablette et Desktop *****/
+@media only screen and (min-width: 767.98px) {
+  .restaurants-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 50px;
+  }
+  .restaurants h2 {
+    padding: 50px 50px 20px;
+  }
+
+  .function {
+    padding: 20px 70px 60px;
+  }
+
+  .container-footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    height: 115px;
+    gap: 90px;
+    padding: 30px 25px;
+    ul {
+      flex-direction: row;
+      gap: 15px;
+    }
+    .info-icon-2 {
+      padding-right: 30px;
+    }
+  }
+}
+
+/***** Desktop *****/
+@media only screen and (min-width: 1024px) {
+  .description{
+    padding-bottom: 30px;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      margin: 25px 0 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .restaurants-cards {
+    padding: 0 160px;
+    row-gap: 50px;
+    column-gap: 100px;
+  }
+
+  .function {
+    padding: 20px 180px 60px;
+    ul {
+      flex-direction: row;
+      gap: 35px;
+    }
+  }
+
+  .restaurants h2 {
+    padding: 50px 160px 20px;
+  }
+}
+

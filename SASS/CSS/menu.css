@@ -157,6 +157,7 @@
 .menu-box h3 {
   position: relative;
   padding-bottom: 10px;
+  padding-top: 30px;
 }
 .menu-box h3::before {
   content: "";

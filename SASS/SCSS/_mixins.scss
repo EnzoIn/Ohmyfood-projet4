@@ -17,6 +17,7 @@
 @mixin menu-line() {
   position: relative;
   padding-bottom: 10px;
+  padding-top: 30px;
   &::before {
     content: "";
     position: absolute;
