@@ -34,7 +34,7 @@
   padding: 0 15px 0 15px;
   border-radius: 20px 20px 0 0;
   margin-top: -45px;
-  gap: 40px;
+  gap: 10px;
   width: 100%;
   max-width: 1055px;
   background: $background-grey-light;
@@ -127,7 +127,7 @@
   overflow: hidden;
   height: 69px;
   border-radius: 0 15px 15px 0;
-  background: $background-green-light; 
+  background: $background-green-light;
   .case:hover & {
     animation: slider-left 0.5s ease-in-out forwards;
   }
@@ -158,3 +158,15 @@
   animation-delay: 1200ms;
 }
 
+/***** Tablette et Desktop *****/
+@media only screen and (max-width: 375px){
+  .menu .restaurant-title {
+    font-size: 26px;
+}
+}
+
+@media only screen and (min-width: 767.98px){
+  .menu-header {
+    justify-content: center;
+  }
+}

@@ -167,7 +167,7 @@ form input:focus {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 }
 .btn-linear:not(:hover) {
-  opacity: none;
+  opacity: 1;
   transition: 0.5s;
 }
 
@@ -235,7 +235,7 @@ form input:focus {
 }
 .restaurants-cards a {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   text-decoration: none;
   width: 100%;
 }
@@ -264,6 +264,28 @@ form input:focus {
   border-radius: 2px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
 }
+.restaurants-cards .card .fa-regular.fa-heart {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  font-size: 22px;
+  color: black;
+}
+.restaurants-cards .card .fa-solid.fa-heart {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  opacity: 0;
+  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-mask-image: linear-gradient(193deg, #000 90%, transparent);
+  font-size: 22px;
+}
+.restaurants-cards .card .fa-solid.fa-heart:hover {
+  opacity: 100%;
+  transition: 0.8s;
+}
 
 .restaurants-cards .card-content {
   display: flex;
@@ -279,28 +301,6 @@ form input:focus {
 .restaurants-cards .card-content .card-subtitle {
   color: black;
   font-size: 17px;
-}
-.restaurants-cards .card-content .fa-regular.fa-heart {
-  position: absolute;
-  right: 30px;
-  bottom: 20px;
-  font-size: 22px;
-  color: black;
-}
-.restaurants-cards .card-content .fa-solid.fa-heart {
-  position: absolute;
-  right: 30px;
-  bottom: 20px;
-  opacity: 0;
-  background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-mask-image: linear-gradient(193deg, #000 90%, transparent);
-  font-size: 22px;
-}
-.restaurants-cards .card-content .fa-solid.fa-heart:hover {
-  opacity: 100%;
-  transition: 0.8s;
 }
 
 .container-footer {
@@ -355,6 +355,15 @@ form input:focus {
   .function {
     padding: 20px 70px 60px;
   }
+  .description {
+    padding-bottom: 30px;
+  }
+  .description h1 {
+    font-size: 40px;
+  }
+  .description p {
+    margin: 25px 0 25px;
+  }
   .container-footer {
     flex-direction: row-reverse;
     align-items: flex-end;
@@ -368,18 +377,6 @@ form input:focus {
   }
   .container-footer .info-icon-2 {
     padding-right: 30px;
-  }
-}
-/***** Desktop *****/
-@media only screen and (min-width: 1024px) {
-  .description {
-    padding-bottom: 30px;
-  }
-  .description h1 {
-    font-size: 40px;
-  }
-  .description p {
-    margin: 25px 0 25px;
   }
 }
 @media only screen and (min-width: 1300px) {

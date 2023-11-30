@@ -106,7 +106,7 @@
   padding: 0 15px 0 15px;
   border-radius: 20px 20px 0 0;
   margin-top: -45px;
-  gap: 40px;
+  gap: 10px;
   width: 100%;
   max-width: 1055px;
   background: #F6F6F6;
@@ -238,4 +238,16 @@
 .fade-3 {
   animation: menu-fade 1s ease-in-out forwards;
   animation-delay: 1200ms;
+}
+
+/***** Tablette et Desktop *****/
+@media only screen and (max-width: 375px) {
+  .menu .restaurant-title {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 767.98px) {
+  .menu-header {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=menu.css.map */

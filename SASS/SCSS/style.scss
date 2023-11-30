@@ -145,7 +145,7 @@ form {
   gap: 18px;
   a {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     text-decoration: none;
     width: 100%;
   }
@@ -172,6 +172,16 @@ form {
       border-radius: 2px;
       box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
     }
+    .fa-regular.fa-heart {
+      @include position(absolute, $right: 30px, $bottom: 20px);
+      font-size: 22px;
+      color: black;
+    }
+    .fa-solid.fa-heart {
+      @include position(absolute, $right: 30px, $bottom: 20px);
+      @include heart-linear-gradient;
+      font-size: 22px;
+    }
   }
 }
 
@@ -190,16 +200,6 @@ form {
     @extend %font-light;
     color: black;
     font-size: 17px;
-  }
-  .fa-regular.fa-heart {
-    @include position(absolute, $right: 30px, $bottom: 20px);
-    font-size: 22px;
-    color: black;
-  }
-  .fa-solid.fa-heart {
-    @include position(absolute, $right: 30px, $bottom: 20px);
-    @include heart-linear-gradient;
-    font-size: 22px;
   }
 }
 
@@ -256,6 +256,15 @@ form {
   .function {
     padding: 20px 70px 60px;
   }
+  .description {
+    padding-bottom: 30px;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      margin: 25px 0 25px;
+    }
+  }
 
   .container-footer {
     flex-direction: row-reverse;
@@ -269,19 +278,6 @@ form {
     }
     .info-icon-2 {
       padding-right: 30px;
-    }
-  }
-}
-
-/***** Desktop *****/
-@media only screen and (min-width: 1024px) {
-  .description{
-    padding-bottom: 30px;
-    h1 {
-      font-size: 40px;
-    }
-    p {
-      margin: 25px 0 25px;
     }
   }
 }
@@ -305,4 +301,3 @@ form {
     padding: 50px 160px 20px;
   }
 }
-
