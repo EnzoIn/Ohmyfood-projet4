@@ -75,14 +75,13 @@
 
 /***** Button Linear-Gradient *****/
 /***** Header *****/
-.logo-header {
-  position: relative;
-}
-.logo-header .back-arrow {
+.back-arrow {
   position: absolute;
+  top: 29px;
   left: 20px;
   color: #353535;
   font-size: 20px;
+  z-index: 1;
 }
 
 /***** Main Container *****/

@@ -12,6 +12,7 @@
 @import "./mixins";
 @import "./placeholders";
 
+
 /***** General ******/
 h1,
 h2 {
@@ -25,12 +26,14 @@ h2 {
 }
 
 /****** Header Logo *****/
-.logo-header {
+header h1 {
   @extend %flex-center;
   position: relative;
   width: 100%;
-  height: 63px;
+  height: 80px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  @extend %font-title-menu;
+  font-size: 30px;
 }
 
 /****** Header Location *****/
@@ -39,6 +42,7 @@ form {
   background: $background-grey-dark;
   width: 100%;
   height: 50px;
+  padding-left: 12px;
   label {
     color: $text-grey-dark;
   }
@@ -64,7 +68,7 @@ form {
   text-align: center;
   background: $background-grey-light;
   padding-bottom: 60px;
-  h1 {
+  h2 {
     margin: 35px 0 10px;
     padding: 0 60px;
   }
@@ -89,7 +93,10 @@ form {
     li {
       @extend %font-medium;
       @extend %flex-center;
+      justify-content: flex-start;
       position: relative;
+      min-width: 270px;
+      max-width: 335px;
       width: 100%;
       height: 72px;
       border-radius: 20px;
@@ -116,7 +123,7 @@ form {
 }
 
 .function li i {
-  @include position(absolute, $left: 35px, $top: 23px);
+  padding: 0 30px 4px 40px;
   font-size: 20px;
 }
 
@@ -162,7 +169,7 @@ form {
       object-fit: cover;
       border-radius: 15px 15px 0 0;
     }
-    .new {
+    span {
       @include position(absolute, $right: 12px, $top: 12px);
       @extend %font-medium;
       color: $text-green-dark;
@@ -210,9 +217,11 @@ form {
   gap: 16px;
   padding: 22px 25px;
   background: $text-grey-dark;
-  img {
-    width: 139px;
-    height: 27px;
+  h2 {
+    @extend %font-title-menu;
+    font-size: 17px;
+    color: white;
+    padding-right: 40px;
   }
   ul {
     display: flex;
@@ -242,83 +251,4 @@ form {
 }
 
 /***** Tablette et Desktop *****/
-@media only screen and (min-width: 767.98px) {
-  .restaurants-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding: 0 50px;
-  }
-  .restaurants h2 {
-    padding: 50px 50px 20px;
-  }
-
-  .function {
-    padding: 20px 70px 60px;
-  }
-  .description {
-    padding-bottom: 30px;
-    h1 {
-      font-size: 40px;
-    }
-    p {
-      margin: 25px 0 25px;
-    }
-  }
-
-  .container-footer {
-    flex-direction: row-reverse;
-    align-items: flex-end;
-    height: 115px;
-    gap: 90px;
-    padding: 30px 25px;
-    ul {
-      flex-direction: row;
-      gap: 15px;
-    }
-    .info-icon-2 {
-      padding-right: 30px;
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .function ul li {
-    width: 322.486px;
-  }
-
-  .restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0 60px;
-  }
-  .section-title {
-    display: flex;
-    justify-content: flex-start;
-    width: 1080px;
-    
-    
-  }
-  .restaurants-cards {
-    row-gap: 50px;
-    column-gap: 100px;
-    .card {
-      width: 490px;
-    }
-  }
-
-  .function {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    ul {
-      flex-direction: row;
-      gap: 45px;
-    }
-  }
-
-  .restaurants h2 {
-    padding: 50px 0 20px;
-  }
-}
+@import "./responsive";

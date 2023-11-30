@@ -53,7 +53,7 @@
 }
 /***** Animation Heart *****/
 /***** Position *****/
-.restaurants-cards, .function span, .function ul li, .function ul, .description, form, .logo-header, .loader-container .loader, .loader-container, .btn-linear {
+.restaurants-cards, .function span, .function ul li, .function ul, .description, form, header h1, .loader-container .loader, .loader-container, .btn-linear {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +66,7 @@ h2 {
   font-weight: 700;
 }
 
-.restaurants-cards .card .new, .function span, .function ul li, form input:focus, form input::placeholder, .btn-linear {
+.restaurants-cards .card span, .function span, .function ul li, form input:focus, form input::placeholder, .btn-linear {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
 }
@@ -74,6 +74,13 @@ h2 {
 .restaurants-cards .card-content .card-subtitle, .description p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+}
+
+.container-footer h2, header h1 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-size: 28px;
+  font-style: italic;
 }
 
 /***** Button Linear-Gradient *****/
@@ -116,11 +123,12 @@ h2 {
 }
 
 /****** Header Logo *****/
-.logo-header {
+header h1 {
   position: relative;
   width: 100%;
-  height: 63px;
+  height: 80px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  font-size: 30px;
 }
 
 /****** Header Location *****/
@@ -128,6 +136,7 @@ form {
   background: #EAEAEA;
   width: 100%;
   height: 50px;
+  padding-left: 12px;
 }
 form label {
   color: #353535;
@@ -152,7 +161,7 @@ form input:focus {
   background: #F6F6F6;
   padding-bottom: 60px;
 }
-.description h1 {
+.description h2 {
   margin: 35px 0 10px;
   padding: 0 60px;
 }
@@ -180,7 +189,10 @@ form input:focus {
   gap: 20px;
 }
 .function ul li {
+  justify-content: flex-start;
   position: relative;
+  min-width: 270px;
+  max-width: 335px;
   width: 100%;
   height: 72px;
   border-radius: 20px;
@@ -204,9 +216,7 @@ form input:focus {
 }
 
 .function li i {
-  position: absolute;
-  top: 23px;
-  left: 35px;
+  padding: 0 30px 4px 40px;
   font-size: 20px;
 }
 
@@ -253,7 +263,7 @@ form input:focus {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.restaurants-cards .card .new {
+.restaurants-cards .card span {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -311,9 +321,10 @@ form input:focus {
   padding: 22px 25px;
   background: #353535;
 }
-.container-footer img {
-  width: 139px;
-  height: 27px;
+.container-footer h2 {
+  font-size: 17px;
+  color: white;
+  padding-right: 40px;
 }
 .container-footer ul {
   display: flex;
@@ -342,6 +353,7 @@ form input:focus {
 }
 
 /***** Tablette et Desktop *****/
+/***** Tablette et Desktop *****/
 @media only screen and (min-width: 767.98px) {
   .restaurants-cards {
     display: grid;
@@ -358,7 +370,7 @@ form input:focus {
   .description {
     padding-bottom: 30px;
   }
-  .description h1 {
+  .description h2 {
     font-size: 40px;
   }
   .description p {
@@ -380,6 +392,9 @@ form input:focus {
   }
 }
 @media only screen and (min-width: 1200px) {
+  header h1 {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  }
   .function ul li {
     width: 322.486px;
   }
@@ -389,9 +404,9 @@ form input:focus {
     align-items: center;
     padding: 0 0 60px;
   }
-  .section-title {
-    display: flex;
-    justify-content: flex-start;
+  .restaurants h2 {
+    display: block;
+    padding: 50px 0 20px;
     width: 1080px;
   }
   .restaurants-cards {
@@ -410,7 +425,8 @@ form input:focus {
     flex-direction: row;
     gap: 45px;
   }
-  .restaurants h2 {
-    padding: 50px 0 20px;
+  .function h2 {
+    display: block;
+    width: 1080px;
   }
 }/*# sourceMappingURL=style.css.map */

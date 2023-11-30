@@ -4,13 +4,11 @@
 @import "./placeholders";
 
 /***** Header *****/
-.logo-header {
-  position: relative;
-  .back-arrow {
-    @include position(absolute, $left: 20px);
-    color: $text-grey-dark;
-    font-size: 20px;
-  }
+.back-arrow {
+  @include position(absolute, $left: 20px, $top: 29px);
+  color: $text-grey-dark;
+  font-size: 20px;
+  z-index: 1;
 }
 
 /***** Main Container *****/
@@ -159,13 +157,13 @@
 }
 
 /***** Tablette et Desktop *****/
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 375px) {
   .menu .restaurant-title {
     font-size: 26px;
-}
+  }
 }
 
-@media only screen and (min-width: 767.98px){
+@media only screen and (min-width: 767.98px) {
   .menu-header {
     justify-content: center;
   }
