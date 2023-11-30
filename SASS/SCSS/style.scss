@@ -282,22 +282,43 @@ form {
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
+  .function ul li {
+    width: 322.486px;
+  }
+
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 60px;
+  }
+  .section-title {
+    display: flex;
+    justify-content: flex-start;
+    width: 1080px;
+    
+    
+  }
   .restaurants-cards {
-    padding: 0 160px;
     row-gap: 50px;
     column-gap: 100px;
+    .card {
+      width: 490px;
+    }
   }
 
   .function {
-    padding: 20px 180px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     ul {
       flex-direction: row;
-      gap: 35px;
+      gap: 45px;
     }
   }
 
   .restaurants h2 {
-    padding: 50px 160px 20px;
+    padding: 50px 0 20px;
   }
 }
