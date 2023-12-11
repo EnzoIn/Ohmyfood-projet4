@@ -44,17 +44,22 @@
 
 .menu-header {
   @extend %flex-center;
-  justify-content: flex-start;
-  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 635px;
   padding: 30px 20px 0 0;
+  .icon-heart {
+    position: relative;
+    padding-right: 33px;
+  }
   .fa-regular.fa-heart {
-    @include position(absolute, $bottom: 10px);
+    @include position(absolute, $bottom: -10px);
     font-size: 22px;
     color: black;
   }
   .fa-solid.fa-heart {
     cursor: pointer;
-    @include position(absolute, $bottom: 10px);
+    @include position(absolute, $bottom: -10px);
     @include heart-linear-gradient;
     font-size: 22px;
   }
@@ -137,7 +142,7 @@
 
 .menu-footer {
   @extend %flex-center;
-  padding: 28px 0 40px;
+  padding-bottom: 40px;
 }
 
 /***** Animations Delay Menu *****/
@@ -157,14 +162,14 @@
 }
 
 /***** Tablette et Desktop *****/
-@media only screen and (max-width: 375px) {
-  .menu .restaurant-title {
-    font-size: 26px;
-  }
-}
-
 @media only screen and (min-width: 767.98px) {
   .menu-header {
     justify-content: center;
+    .fa-regular.fa-heart {
+      @include position(absolute, $bottom: -10px);
+    }
+    .fa-solid.fa-heart {
+      @include position(absolute, $bottom: -10px);
+    }
   }
 }

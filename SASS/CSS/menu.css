@@ -115,20 +115,25 @@
 }
 
 .menu-header {
-  justify-content: flex-start;
-  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 635px;
   padding: 30px 20px 0 0;
+}
+.menu-header .icon-heart {
+  position: relative;
+  padding-right: 33px;
 }
 .menu-header .fa-regular.fa-heart {
   position: absolute;
-  bottom: 10px;
+  bottom: -10px;
   font-size: 22px;
   color: black;
 }
 .menu-header .fa-solid.fa-heart {
   cursor: pointer;
   position: absolute;
-  bottom: 10px;
+  bottom: -10px;
   opacity: 0;
   background: linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%);
   -webkit-background-clip: text;
@@ -156,7 +161,6 @@
 .menu-box h3 {
   position: relative;
   padding-bottom: 10px;
-  padding-top: 30px;
 }
 .menu-box h3::before {
   content: "";
@@ -220,7 +224,7 @@
 }
 
 .menu-footer {
-  padding: 28px 0 40px;
+  padding-bottom: 40px;
 }
 
 /***** Animations Delay Menu *****/
@@ -240,13 +244,16 @@
 }
 
 /***** Tablette et Desktop *****/
-@media only screen and (max-width: 375px) {
-  .menu .restaurant-title {
-    font-size: 26px;
-  }
-}
 @media only screen and (min-width: 767.98px) {
   .menu-header {
     justify-content: center;
+  }
+  .menu-header .fa-regular.fa-heart {
+    position: absolute;
+    bottom: -10px;
+  }
+  .menu-header .fa-solid.fa-heart {
+    position: absolute;
+    bottom: -10px;
   }
 }/*# sourceMappingURL=menu.css.map */
