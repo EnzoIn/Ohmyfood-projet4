@@ -40,7 +40,8 @@
 /***** Animation Loader *****/
 @keyframes cancel-loader {
   100% {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes flip-loader {
