@@ -87,6 +87,15 @@
 }
 
 @keyframes cancel-loader {
+  from {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.80;
+  }
+  70% {
+    opacity: 0.50;
+  }
   100% {
     opacity: 0;
     visibility: hidden;
